@@ -3,9 +3,7 @@ import { transverseExports, transverseImports } from './lib/transverse'
 
 const subGroup = async (entrypoint: string[]) => {
   const parsedFiles = await Promise.all(entrypoint.map(entry => parse(entry)))
-
   const exported = await Promise.all(parsedFiles.map(file => transverseExports(file)))
-
   const imported = await Promise.all(parsedFiles.map(file => transverseImports(file)))
 
   console.log(` parsedFiles : ${JSON.stringify(parsedFiles, null, 2)}`)

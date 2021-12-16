@@ -1,0 +1,7 @@
+{
+  "name": "subgroup",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "private": true
+}

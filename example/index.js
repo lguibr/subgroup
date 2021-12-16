@@ -1,11 +1,12 @@
-import example from './example'
-const isOdd = require('is-odd');
+import { upperCase } from "upper-case";
+
+import example from '#src/example'
+import { test as example2 } from '#src/example2'
 
 
-const isTwoOdd = isOdd(2)
-const teste = require('./exampleNested')
-const { named } = require('./exampleNested')
+const test = upperCase('test');
+
 
 
 export default example
-export { named, teste, isTwoOdd }
+export { example2, test }
